@@ -63,6 +63,16 @@ function validateUser (){
     else{
         console.log("!! Error !! \nPlease enter correct password.");
     }
+
+    // UC7 Password should have atleast one number
+    let passwordRule3 = readline.question("Please enter your password including number : ");
+    let regexPasswordRule3 = /^[A-Z][a-zA-Z0-9]{7,}[0-9]{1,}/
+    if (regexPasswordRule3.test(passwordRule3) == true){
+        console.log("Password is : ",passwordRule3);
+    }
+    else{
+        console.log("!! Error !! \nPlease enter correct password.");
+    }
 }
 
 validateUser();
