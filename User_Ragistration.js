@@ -53,6 +53,16 @@ function validateUser (){
     else{
         console.log("!! Error !! \nPlease enter correct password.");
     }
+
+    // UC6 Password should have atleast one Upper case
+    let passwordRule2 = readline.question("Please enter your password including Uppercase : ");
+    let regexPasswordRule2 = /^[A-Z][a-zA-Z0-9]{8,}/
+    if (regexPasswordRule2.test(passwordRule2) == true){
+        console.log("Password is : ",passwordRule2);
+    }
+    else{
+        console.log("!! Error !! \nPlease enter correct password.");
+    }
 }
 
 validateUser();
