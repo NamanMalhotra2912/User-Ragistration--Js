@@ -23,6 +23,16 @@ function validateUser (){
     else{
         console.log("!! Error !! \nLast name should contain first capital letter with menimum lenth of 3 characters");
     }
+
+    // UC3 Email validation
+    let email = readline.question("Please enter email address : ");
+    let regexEmail = /^[a-z.a-zA-Z0-9]+@[a-zA-Z0-9]+(.[a-z])/
+    if (regexEmail.test(email) == true){
+        console.log("Email id is : ",email);
+    }
+    else{
+        console.log("!! Error !! \nPlease enter correct email address.");
+    }
 }
 
 validateUser();
