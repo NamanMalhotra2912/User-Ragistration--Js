@@ -73,6 +73,16 @@ function validateUser (){
     else{
         console.log("!! Error !! \nPlease enter correct password.");
     }
+
+    // UC8 Should have 1 special character
+    let passwordRule4 = readline.question("Please enter your password including special symbol : ");
+    let regexPasswordRule4 = /^[A-Z][a-zA-Z0-9]{7,}[$&^!@#()|,;:<>?/%-+][0-9]{1,}/
+    if (regexPasswordRule4.test(passwordRule4) == true){
+        console.log("Password is : ",passwordRule4);
+    }
+    else{
+        console.log("!! Error !! \nPlease enter correct password.");
+    }
 }
 
 validateUser();
