@@ -43,6 +43,16 @@ function validateUser (){
     else{
         console.log("!! Error !! \nPlease enter correct mobile number.");
     }
+    
+    // UC5 Password lenth should be minimum 8 characters.
+    let password = readline.question("Please enter your password : ");
+    let regexPassword = /^[a-zA-Z0-9]{8,}/
+    if (regexPassword.test(password) == true){
+        console.log("Password is : ",password);
+    }
+    else{
+        console.log("!! Error !! \nPlease enter correct password.");
+    }
 }
 
 validateUser();
