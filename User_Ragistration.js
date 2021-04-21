@@ -33,6 +33,16 @@ function validateUser (){
     else{
         console.log("!! Error !! \nPlease enter correct email address.");
     }
+    
+    // UC4 Mobile Format
+    let mobileNumber = readline.question("Please enter mobile number : ");
+    let regexMobile = /^[0-9]{2}-[0-9]{10}/
+    if (regexMobile.test(mobileNumber) == true){
+        console.log("Mobile number is : ",mobileNumber);
+    }
+    else{
+        console.log("!! Error !! \nPlease enter correct mobile number.");
+    }
 }
 
 validateUser();
